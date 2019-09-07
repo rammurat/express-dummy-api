@@ -16,11 +16,6 @@ const itemSchema = new mongoose.Schema(
     },
     notes: String,
     due: Date,
-    createdBy: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: 'user',
-      required: true
-    },
     list: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: 'list',

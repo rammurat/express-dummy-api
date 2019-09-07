@@ -1,7 +1,8 @@
 export const getOne = model => async (req, res) => {
   try {
+    console.log('====>>>>>> request get one ')
     const doc = await model
-      .findOne({ createdBy: req.user._id, _id: req.params.id })
+      .findOne({ _id: req.params.id })
       .lean()
       .exec()
 
@@ -18,8 +19,10 @@ export const getOne = model => async (req, res) => {
 
 export const getMany = model => async (req, res) => {
   try {
+    console.log('====>>>>>> request get many ')
+
     const docs = await model
-      .find({ createdBy: req.user._id })
+      .find()
       .lean()
       .exec()
 
@@ -31,13 +34,13 @@ export const getMany = model => async (req, res) => {
 }
 
 export const createOne = model => async (req, res) => {
-  const createdBy = req.user._id
   try {
-    const doc = await model.create({ ...req.body, createdBy })
+    const doc = await model.create({ ...req.body })
+    console.log(doc)
     res.status(201).json({ data: doc })
   } catch (e) {
-    console.error(e)
-    res.status(400).end()
+    console.error('Error occurred', e)
+    res.status(400).json({ error: 'Unable to create new record' })
   }
 }
 
@@ -46,7 +49,6 @@ export const updateOne = model => async (req, res) => {
     const updatedDoc = await model
       .findOneAndUpdate(
         {
-          createdBy: req.user._id,
           _id: req.params.id
         },
         req.body,
@@ -68,8 +70,8 @@ export const updateOne = model => async (req, res) => {
 
 export const removeOne = model => async (req, res) => {
   try {
+    console.log('REMOVE DOC', req.params.id)
     const removed = await model.findOneAndRemove({
-      createdBy: req.user._id,
       _id: req.params.id
     })
 

@@ -16,20 +16,7 @@ app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-app.get('/', (req, res) => {
-  res.send({ message: 'hiiiii' })
-})
-
-app.get('/data', (req, res) => {
-  res.send({ message: 'hiiiii' })
-})
-
-app.post('/', (req, res) => {
-  console.log(req.body)
-  res.send({ message: 'hiiiii' })
-})
-
-app.use('/item', itemRouter)
+// app.use('/item', itemRouter)
 app.use('/list', listRouter)
 
 export const start = async () => {

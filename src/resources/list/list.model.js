@@ -2,22 +2,29 @@ import mongoose from 'mongoose'
 
 const listSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
+    lat: {
+      type: Number,
       required: true,
       trim: true,
       maxlength: 50
     },
-    description: String,
-    createdBy: {
-      type: mongoose.SchemaTypes.ObjectId,
-      ref: 'user',
-      required: true
-    }
+    lng: {
+      type: Number,
+      required: true,
+      trim: true,
+      maxlength: 50
+    },
+    postCode: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 10
+    },
+    address: String
   },
   { timestamps: true }
 )
 
-listSchema.index({ user: 1, name: 1 }, { unique: true })
+listSchema.index({ lat: 1, lng: 1 }, { unique: false })
 
 export const List = mongoose.model('list', listSchema)
