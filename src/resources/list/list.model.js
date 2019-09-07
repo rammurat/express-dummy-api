@@ -25,6 +25,6 @@ const listSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-listSchema.index({ lat: 1, lng: 1 }, { unique: false })
+listSchema.index({ lat: 1, lng: 1 }, { unique: true })
 
 export const List = mongoose.model('list', listSchema)
