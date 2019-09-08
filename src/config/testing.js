@@ -1,3 +1,5 @@
+import CONFIG from '../app-config'
+
 export const config = {
-  dbUrl: 'mongodb://localhost:27017/api-design-test'
+  dbUrl: CONFIG.TEST_DB_URL
 }
