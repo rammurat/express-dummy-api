@@ -14,12 +14,6 @@ const listSchema = new mongoose.Schema(
       trim: true,
       maxlength: 50
     },
-    postCode: {
-      type: String,
-      required: true,
-      trim: true,
-      maxlength: 10
-    },
     address: String
   },
   { timestamps: true }
