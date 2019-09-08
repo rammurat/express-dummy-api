@@ -34,6 +34,6 @@
 * /api/:id - delete any existing record (DELETE)
 
 ### Testing
-* npm run test-routes - Test all the routers 
-* npm run test-models - Test all the models/tables including data type
-* npm run test-controllers - Test controllers if any authentication is required 
+* `npm run test-routes` - Test all the routers 
+* `npm run test-models` - Test all the models/tables including data type
+* `npm run test-controllers` - Test controllers if any authentication is required 
