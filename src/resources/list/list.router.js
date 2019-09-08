@@ -3,13 +3,13 @@ import controllers from './list.controllers'
 
 const router = Router()
 
-// /api/list
+// list
 router
   .route('/')
   .get(controllers.getMany)
   .post(controllers.createOne)
 
-// /api/list/:id
+// list/:id
 router
   .route('/:id')
   .get(controllers.getOne)

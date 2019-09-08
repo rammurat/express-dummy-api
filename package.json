@@ -1,5 +1,5 @@
 {
-  "name": "express-dummy-api",
+  "name": "express-map-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rammurat/express-dummy-api.git"
+    "url": "git+https://github.com/rammurat/express-map-api.git"
   },
   "author": "Ram Murat Sharma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rammurat/express-dummy-api/issues"
+    "url": "https://github.com/rammurat/express-map-api/issues"
   },
-  "homepage": "https://github.com/rammurat/express-dummy-api#readme",
+  "homepage": "https://github.com/rammurat/express-map-api#readme",
   "dependencies": {
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",

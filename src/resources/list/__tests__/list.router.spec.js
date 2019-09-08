@@ -1,6 +1,6 @@
-import router from '../item.router'
+import router from '../list.router'
 
-describe('item router', () => {
+describe('list router', () => {
   test('has crud routes', () => {
     const routes = [
       { path: '/', method: 'get' },

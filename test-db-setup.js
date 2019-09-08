@@ -1,15 +1,14 @@
 import mongoose from 'mongoose'
 import cuid from 'cuid'
 import _ from 'lodash'
-import { Item } from './src/resources/item/item.model'
 import { List } from './src/resources/list/list.model'
 
-const models = { List, Item }
+const models = { List }
 
 const url =
   process.env.MONGODB_URI ||
   process.env.DB_URL ||
-  'mongodb://localhost:27017/api-testing'
+  'mongodb://localhost:27017/api-design-test'
 
 global.newId = () => {
   return mongoose.Types.ObjectId()
