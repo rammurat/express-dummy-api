@@ -1,4 +1,4 @@
-# API design in Express for google map based client application
+# API design in Express
 * A quick POC created to provide APIs for front end (Please refer - Google map integration https://github.com/rammurat/react-map-integration)
 
 ## Resources
