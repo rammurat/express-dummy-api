@@ -1,6 +1,5 @@
 export const getOne = model => async (req, res) => {
   try {
-    console.log('====>>>>>> request get one ')
     const doc = await model
       .findOne({ _id: req.params.id })
       .lean()
@@ -19,7 +18,7 @@ export const getOne = model => async (req, res) => {
 
 export const getMany = model => async (req, res) => {
   try {
-    console.log('====>>>>>> request get many ')
+    console.log('Get all records')
 
     const docs = await model
       .find()
@@ -35,8 +34,9 @@ export const getMany = model => async (req, res) => {
 
 export const createOne = model => async (req, res) => {
   try {
+    console.log('Create new record')
+
     const doc = await model.create({ ...req.body })
-    console.log(doc)
     res.status(201).json({ data: doc })
   } catch (e) {
     console.error('Error occurred', e)
@@ -46,6 +46,7 @@ export const createOne = model => async (req, res) => {
 
 export const updateOne = model => async (req, res) => {
   try {
+    console.log('Update existing matching record')
     const updatedDoc = await model
       .findOneAndUpdate(
         {
@@ -70,7 +71,7 @@ export const updateOne = model => async (req, res) => {
 
 export const removeOne = model => async (req, res) => {
   try {
-    console.log('REMOVE DOC', req.params.id)
+    console.log('Remove one matching record', req.params.id)
     const removed = await model.findOneAndRemove({
       _id: req.params.id
     })
