@@ -17,6 +17,9 @@ app.use(morgan('dev'))
 
 app.use('/list', listRouter)
 
+// optional for this poc, consider above /list to access all api via parent router
+app.use('/', listRouter)
+
 export const start = async () => {
   try {
     await connect()
