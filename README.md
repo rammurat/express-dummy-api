@@ -15,7 +15,7 @@
 
 ## Set-up - Database
 * Install home brew for quick installation - `brew tap mongodb/brew`
-* Install mongo db - `rew install mongodb-community@4.2`
+* Install mongo db - `brew install mongodb-community@4.2`
 * Run Mongodb - `mongod --config /usr/local/etc/mongod.conf`
 * Questions? - Please refer - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
