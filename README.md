@@ -20,7 +20,7 @@
 
 
 ## Set-up - Application
-* npm install
+* `npm install`
 * Start server - `npm run dev`
 * Build directory - `npm run build` (optional)
 * Open application via `http://localhost:1234/`
@@ -29,10 +29,10 @@
 * Please refer this link on how to consume this API here - http://localhost:1234/api/
 
 ## API urls for reference
-* /api/ - get all records (GET)
-* /api/ - post new record (POST)
-* /api/:id - update any existing record (PUT)
-* /api/:id - delete any existing record (DELETE)
+* `/api/` - get all records (GET)
+* `/api/` - post new record (POST)
+* `/api/:id` - update any existing record (PUT)
+* `/api/:id` - delete any existing record (DELETE)
 
 ### Testing
 * `npm run test-routes` - Test all the routers 
