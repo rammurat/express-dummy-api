@@ -18,7 +18,6 @@
     "url": "git+https://github.com/rammurat/express-map-api.git"
   },
   "author": "Ram Murat Sharma",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/rammurat/express-map-api/issues"
   },
