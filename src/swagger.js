@@ -2,19 +2,19 @@ const swaggerDocument = {
   swagger: '2.0',
   info: {
     version: '1.0.0',
-    title: 'API representation',
+    title: 'API Representation',
     description: 'API representation using Swagger',
     license: {
       name: 'MIT',
       url: 'https://opensource.org/licenses/MIT'
     }
   },
-  host: 'localhost:3001',
-  basePath: '/api/',
+  host: 'localhost:1234',
+  basePath: '/',
   tags: [
     {
       name: 'List',
-      description: 'API for list in the system'
+      description: 'API for address list in the system.'
     }
   ],
   schemes: ['http', 'https'],
@@ -24,7 +24,7 @@ const swaggerDocument = {
     '/list': {
       post: {
         tags: ['List'],
-        description: 'Create new address in system',
+        description: 'Create new address in system.',
         parameters: [
           {
             name: 'list',
@@ -46,7 +46,7 @@ const swaggerDocument = {
         }
       },
       get: {
-        tags: ['Lists'],
+        tags: ['List'],
         summary: 'Get all records in system',
         responses: {
           '200': {
@@ -69,11 +69,11 @@ const swaggerDocument = {
         }
       ],
       get: {
-        tags: ['Lists'],
-        summary: 'Get user with given ID',
+        tags: ['List'],
+        summary: 'Get address details with given ID',
         responses: {
           '200': {
-            description: 'User is found',
+            description: 'Address is found.',
             schema: {
               $ref: '#/definitions/List'
             }
@@ -81,11 +81,11 @@ const swaggerDocument = {
         }
       },
       delete: {
-        summary: 'Delete user with given ID',
-        tags: ['Lists'],
+        summary: 'Delete address with given ID',
+        tags: ['List'],
         responses: {
           '200': {
-            description: 'User is deleted',
+            description: 'Address is deleted.',
             schema: {
               $ref: '#/definitions/List'
             }
@@ -93,13 +93,13 @@ const swaggerDocument = {
         }
       },
       put: {
-        summary: 'Update user with give ID',
-        tags: ['Lists'],
+        summary: 'Update address with give ID',
+        tags: ['List'],
         parameters: [
           {
             name: 'user',
             in: 'body',
-            description: 'User with new values of properties',
+            description: 'Address with new values of properties.',
             schema: {
               $ref: '#/definitions/List'
             }
@@ -107,7 +107,7 @@ const swaggerDocument = {
         ],
         responses: {
           '200': {
-            description: 'User is updated',
+            description: 'Address is updated',
             schema: {
               $ref: '#/definitions/List'
             }
@@ -118,8 +118,12 @@ const swaggerDocument = {
   },
   definitions: {
     List: {
-      required: ['lat', 'lng', 'address'],
+      required: ['_id', 'lat', 'lng', 'address'],
       properties: {
+        _id: {
+          type: 'string',
+          unique: true
+        },
         lat: {
           type: 'number'
         },
