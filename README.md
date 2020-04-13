@@ -9,7 +9,8 @@
 ## Tech utilized
 * Express 4
 * Mongoose 5 
-* Morgan
+* Morgan (logging system)
+* Swagger (API documentation)
 
 
 ## Set-up - Database
