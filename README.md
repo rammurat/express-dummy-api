@@ -25,6 +25,8 @@
 * Build directory - `npm run build` (optional)
 * Open application via `http://localhost:1234/`
 
+## Swagger API documentation
+* Please refer this link on how to consume this API here - http://localhost:1234/api/
 
 ## API urls for reference
 * /api/ - get all records (GET)
