@@ -8,7 +8,7 @@ const models = { List }
 const url =
   process.env.MONGODB_URI ||
   process.env.DB_URL ||
-  'mongodb://localhost:27017/api-design-test'
+  'mongodb://localhost:27017/api-test'
 
 global.newId = () => {
   return mongoose.Types.ObjectId()
